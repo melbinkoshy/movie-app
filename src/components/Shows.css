@@ -1,0 +1,16 @@
+.shows-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Align items horizontally in the center */
+  gap: 20px; /* Add some gap between MovieCard components */
+}
+
+/* Optional: You can adjust the width of each MovieCard */
+.movie-card {
+  width: 300px; /* Adjust this value as needed */
+}
+
+/* Style for the MovieCard component (if needed) */
+/* .movie-card {
+  // Your MovieCard styles here
+} */

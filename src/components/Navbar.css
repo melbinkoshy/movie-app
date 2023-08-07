@@ -1,0 +1,19 @@
+body{
+  margin: 0;
+}
+
+.navbar{
+  background-color: #121212;
+  color: white; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 100px;
+  margin-bottom: 100px;
+}
+.searchbar{
+  height: 25px;
+  border-radius: 20px;
+  border-style: solid;
+  padding: 5px 20px;
+}
