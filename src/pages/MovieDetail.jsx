@@ -2,11 +2,12 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import Navbar from "../components/Navbar";
 import './MovieDetail.css'
+import BookMovieForm from '../components/BookMovieForm';
 export default function MovieDetail() {
   const params=useParams();
   const [movieDetails,setMovieDetails]=useState({});
   const [imgURL,setImgURL]=useState([])
-
+  const [isFormVisible, setIsFormVisible] = useState(false);
   useEffect(()=>{
     async function fetchDetails(){
       try{
@@ -32,6 +33,7 @@ export default function MovieDetail() {
   return (
     <>
       <Navbar/>
+      {!isFormVisible &&
       <div className='movie-details-card'>
         <img className="movie-banner"
           src={imgURL}/>
@@ -45,7 +47,18 @@ export default function MovieDetail() {
           </div>}
           
         </div>
+    </div>}
+    <div className='form-button'>
+      {!isFormVisible && (
+        <button onClick={() => setIsFormVisible(true)}>Book Movie Ticket</button>
+      )}
     </div>
+
+      <div className='form'>
+        {isFormVisible &&  <BookMovieForm/>}
+
+      </div>
+
     </>
   )
     

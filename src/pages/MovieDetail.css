@@ -29,3 +29,18 @@
 .grey-text{
   color: rgb(155, 155, 155);
 }
+.form-button{
+  display: flex;
+  justify-content: center;
+  margin-top: 70px;
+}
+.form-button>button{
+  padding: 15px 15px;
+  border-radius: 50px;
+  cursor: pointer;
+  border: none;
+}
+.form{
+  padding-top: 150px;
+
+}
