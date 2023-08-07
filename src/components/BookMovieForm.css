@@ -1,0 +1,23 @@
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+label {
+  display: inline-block;
+  width: 120px; /* Set a fixed width for the labels */
+}
+
+input[type="text"],
+input[type="email"] {
+  flex: 1; /* Fill available space */
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: none;
+  width: 200px;
+}
+
+button {
+  align-self: flex-start;
+}

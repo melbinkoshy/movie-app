@@ -33,10 +33,13 @@ export default function MovieDetail() {
   return (
     <>
       <Navbar/>
-      {!isFormVisible &&
       <div className='movie-details-card'>
         <img className="movie-banner"
           src={imgURL}/>
+        <div className='form'>
+        {isFormVisible &&  <BookMovieForm movieName={movieDetails.name}/>}
+        </div>
+        {!isFormVisible &&
         <div className="movie-details">
           <h1>{movieDetails.name}</h1>
           {movieDetails.rating?.average}
@@ -46,18 +49,15 @@ export default function MovieDetail() {
             {movieDetails.genres?.map((genre)=>( <span className='grey-text'> {genre}, </span>))}
           </div>}
           
-        </div>
-    </div>}
+        </div>}
+    </div>
     <div className='form-button'>
       {!isFormVisible && (
         <button onClick={() => setIsFormVisible(true)}>Book Movie Ticket</button>
       )}
     </div>
 
-      <div className='form'>
-        {isFormVisible &&  <BookMovieForm/>}
-
-      </div>
+      
 
     </>
   )
