@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import "./MovieCard.css"
+import { Link } from 'react-router-dom';
 export default function MovieCard(props) {
   const [imgURL,setImgURL]=useState([])
   useEffect(()=>{
@@ -14,7 +15,9 @@ export default function MovieCard(props) {
       }
       fetchImage();
     },[])
-   return (<div className='movie-card'>
+   return (
+    <Link to={`/${props.id}`}>
+   <div className='movie-card'>
       
       <div className='movie-info'>
         <img className="poster"
@@ -27,7 +30,8 @@ export default function MovieCard(props) {
         </div>
         
       </div>
-      
-    </div>)
+       
+    </div>
+    </Link>)
   
 }

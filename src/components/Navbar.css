@@ -17,3 +17,10 @@ body{
   border-style: solid;
   padding: 5px 20px;
 }
+.navbar-wrapper{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}

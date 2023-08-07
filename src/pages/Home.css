@@ -10,10 +10,3 @@
 .shows{
   margin-left: 50px;
 }
-.navbar-wrapper{
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-}
