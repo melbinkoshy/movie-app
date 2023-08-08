@@ -8,9 +8,7 @@ export default function Home() {
       <Navbar/>
       <div className='Home'>
         <h4>One Stop for all your favourite TV shows...</h4>
-      <div className="shows">
         <Shows/>
-      </div>
       </div>
     </>
     

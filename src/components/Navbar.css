@@ -11,12 +11,24 @@ body{
   padding: 5px 100px;
   margin-bottom: 100px;
 }
-.searchbar{
-  height: 25px;
-  border-radius: 20px;
-  border-style: solid;
-  padding: 5px 20px;
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+    padding: 10px; /* Adjust as needed */
+  }
 }
+  .searchbar{
+    height: 25px;
+    border-radius: 20px;
+    border-style: solid;
+    padding: 5px 20px;
+  }
+  @media (max-width: 768px) {
+    .searchbar {
+      display: none;
+    }
+  }
 .navbar-wrapper{
   position: fixed;
   top: 0;
