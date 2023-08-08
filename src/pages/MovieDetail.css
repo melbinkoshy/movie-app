@@ -49,3 +49,8 @@
 h2{
   text-align: center;
 }
+.star-icon {
+  width: 16px;
+  height: 16px; 
+  margin-left: 4px; 
+}

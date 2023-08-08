@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'
 import Navbar from "../components/Navbar";
 import './MovieDetail.css'
 import BookMovieForm from '../components/BookMovieForm';
+import StarIcon from '../assets/star.png'
 export default function MovieDetail() {
   const params=useParams();
   const [movieDetails,setMovieDetails]=useState({});
@@ -47,7 +48,9 @@ export default function MovieDetail() {
         {!isFormVisible &&
         <div className="movie-details">
           <h1>{movieDetails.name}</h1>
-          {movieDetails.rating?.average}
+          <div>
+          {movieDetails.rating?.average}<img className="star-icon"src={StarIcon}/>
+          </div>
           <div dangerouslySetInnerHTML={{ __html: movieDetails.summary }}/>
           { movieDetails.genres && <div className=''>
             Genre: 
