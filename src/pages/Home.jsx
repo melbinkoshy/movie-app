@@ -1,6 +1,6 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
-import Shows from '../components/shows'
+import Shows from '../components/Shows'
 import "./Home.css"
 export default function Home() {
   return (
