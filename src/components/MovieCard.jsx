@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import "./MovieCard.css"
 import { Link } from 'react-router-dom';
+import StarIcon from '../assets/star.png'
+
 export default function MovieCard(props) {
   const [imgURL,setImgURL]=useState([])
   useEffect(()=>{
@@ -23,7 +25,7 @@ export default function MovieCard(props) {
         <img className="poster"
           src={imgURL}/>
         <div className="rating">
-          {Number((props.rating*10).toFixed(2))}
+          {Number((props.rating*10).toFixed(2))}<img className="star-icon"src={StarIcon}/>
         </div>
         <div className='movie-name'>
             {props.title}
