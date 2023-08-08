@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
+import toast, { Toaster } from 'react-hot-toast';
 import "./BookMovieForm.css"
 export default function BookMovieForm(props) {
   const [formData, setFormData] = useState({
     name: props.movieName,
     email: '',
+    location:'',
+    tickets:0,
   });
-  console.log(props.movieName)
   const handleInputChange = (event) => {
     const { name, value } = event.target;
     setFormData((prevData) => ({
@@ -16,13 +18,9 @@ export default function BookMovieForm(props) {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Save form data to local storage
     localStorage.setItem('formData', JSON.stringify(formData));
-    // Clear the form
-    setFormData({
-      name: '',
-      email: '',
-    });
+    console.log(localStorage.getItem('formData'));
+    toast("Tickets booked successfully");
   };
 
   return (
@@ -52,12 +50,23 @@ export default function BookMovieForm(props) {
         <input
           type="text"
           name="location"
-          value={formData.email}
+          value={formData.location}
           onChange={handleInputChange}
           required
         />
       </div>
-      <button type="submit">Submit</button>
+      <div>
+        <label>No. of tickets</label>
+        <input
+          type="number"
+          name="tickets"
+          value={formData.tickets}
+          onChange={handleInputChange}
+          required
+        />
+      </div>
+      <button className="submit-btn" type="submit">Book Ticket</button>
+      <Toaster/>
     </form>
   );
 }

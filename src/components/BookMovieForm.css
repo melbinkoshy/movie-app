@@ -2,6 +2,8 @@ form {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  justify-content: center;
+  align-items: center;
 }
 
 label {
@@ -10,7 +12,8 @@ label {
 }
 
 input[type="text"],
-input[type="email"] {
+input[type="email"],
+input[type="number"] {
   flex: 1; /* Fill available space */
   padding: 10px 15px;
   border-radius: 5px;
@@ -18,6 +21,11 @@ input[type="email"] {
   width: 200px;
 }
 
-button {
+.submit-btn {
   align-self: flex-start;
+  padding: 12px 25px;
+  border-radius: 50px;
+  border: none;
+  background-color:#79c142;
+  margin-top: 30px;
 }

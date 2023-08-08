@@ -37,7 +37,12 @@ export default function MovieDetail() {
         <img className="movie-banner"
           src={imgURL}/>
         <div className='form'>
-        {isFormVisible &&  <BookMovieForm movieName={movieDetails.name}/>}
+        {isFormVisible &&  
+          <div>
+            <h2>Book Tickets</h2>
+            <BookMovieForm movieName={movieDetails.name}/>
+          </div>
+        }
         </div>
         {!isFormVisible &&
         <div className="movie-details">
@@ -48,14 +53,15 @@ export default function MovieDetail() {
             Genre: 
             {movieDetails.genres?.map((genre)=>( <span className='grey-text'> {genre}, </span>))}
           </div>}
+          <div className='form-button'>
+          {!isFormVisible && (
+              <button onClick={() => setIsFormVisible(true)}>Book Movie Ticket</button>
+          )}
+    </div>
           
         </div>}
     </div>
-    <div className='form-button'>
-      {!isFormVisible && (
-        <button onClick={() => setIsFormVisible(true)}>Book Movie Ticket</button>
-      )}
-    </div>
+    
 
       
 
