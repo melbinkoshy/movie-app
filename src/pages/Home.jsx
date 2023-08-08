@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from '../components/navbar'
+import Navbar from '../components/Navbar'
 import Shows from '../components/shows'
 import "./Home.css"
 export default function Home() {
